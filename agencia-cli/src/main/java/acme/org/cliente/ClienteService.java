@@ -8,10 +8,9 @@ import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-@RegisterRestClient(baseUri = "http://localhost:8081/cliente")
+@RegisterRestClient(baseUri = "http://localhost:8080/cliente")
 public interface ClienteService {
     
-
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)

@@ -15,13 +15,12 @@ public class ClienteResource {
     @RestClient
     ClienteService clienteService;
 
-
     @GET
     @Path("newCliente")
-    public void newCliente(){
+    public Response newCliente(){
         Cliente cliente = Cliente.of(99, "cli-Remoto");
-        String response = clienteService.newCliente(cliente);
-        System.out.println("response:" + response);
-        //return clienteService.newCliente(cliente);
+        Response response = clienteService.newCliente(cliente);
+        
+        return Response.status(Status.CREATED).entity(response).build();
     }
 }

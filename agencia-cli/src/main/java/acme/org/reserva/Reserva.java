@@ -1,6 +1,6 @@
 package acme.org.reserva;
 
-import acme.org.Cliente.Cliente;
+import acme.org.cliente.Cliente;
 
 public class Reserva {
 

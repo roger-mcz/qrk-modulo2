@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import acme.org.Cliente.Cliente;
+import acme.org.cliente.Cliente;
 
 
 
@@ -24,7 +24,7 @@ public class ReservaResource {
     @Path("newReserva")
     public String newReserva(){
     
-        Cliente cliente = Cliente.of(2, "");
+        Cliente cliente = Cliente.of(2, "cli-Reserva");
         return reservaService.newReserva(cliente);
          
     }
